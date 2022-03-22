@@ -156,7 +156,7 @@ Distinguished = Redis:sismember(TheBeKoS.."BeKoS:Distinguished:Group"..ChatId,Us
 StatusMember = LuaTele.getChatMember(ChatId,UserId).status.luatele
 if UserId == 1390519416 then
 Status = 'مبرمج السورس'
-elseif UserId == 991854306 then
+elseif UserId == 5233166312 then
 Status = 'مطور السورس'
 elseif UserId == Sudo_Id then  
 Status = 'المطور الاساسي'
@@ -900,11 +900,11 @@ elseif Statusrestricted(msg.chat_id,msg.sender.user_id).BanGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id}),LuaTele.setChatMemberStatus(msg.chat_id,msg.sender.user_id,'banned',0)
 elseif Statusrestricted(msg.chat_id,msg.sender.user_id).SilentGroup == true then
 return LuaTele.deleteMessages(msg.chat_id,{[1]= msg.id})
-end
+end 
 if tonumber(msg.sender.user_id) == 1390519416 then
 msg.Name_Controller = 'مبرمج السورس '
 msg.The_Controller = 1
-elseif tonumber(msg.sender.user_id) == 991854306 then
+elseif tonumber(msg.sender.user_id) == 5233166312 then
 msg.Name_Controller = 'مطور السورس '
 msg.The_Controller = 1
 elseif The_ControllerAll(msg.sender.user_id) == true then  
@@ -2323,7 +2323,7 @@ if not msg.ControllerBot then
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*▢ ︙هاذا الامر يخص { '..Controller_Num(1)..' }* ',"md",true)  
 end
 os.execute('rm -rf BeKoS.lua')
-download('https://raw.githubusercontent.com/telovf/BeKoS/main/BeKoS.lua','BeKoS.lua')
+download('https://raw.githubusercontent.com/BeKoS-Main/BeKoS/BeKoS.lua','BeKoS.lua')
 return LuaTele.sendText(msg_chat_id,msg_id,'\n*▢ ︙تم تحديث السورس * ',"md",true)  
 end
 if text == '『 تعطيل الاذاعه 』' or text == 'تعطيل الاذاعه' then
@@ -9905,7 +9905,7 @@ end
 if text == "تويت بالصور" then
 local t = "ليك تويت في الصوره ↫"
 Rrr = math.random(4,50)
-local m = "https://t.me/wffhvv/"..Rrr..""
+local m = "https://t.me/SSMMSS/"..Rrr..""
 local rep = msg.id/2097152/0.5
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id="..msg_chat_id.."&caption="..URL.escape(t).."&photo="..m.."&reply_to_message_id="..rep.."&parse_mode=Markdown")
 end
@@ -9923,7 +9923,7 @@ data = {
 {text = 'programmer Source', url = 't.me/JJJ22J'}, 
 },
 {
-{text = 'Developer Source !', url = 't.me/QFFFFF'}, 
+{text = 'Developer Source !', url = 't.me/QQQ55'}, 
 },
 }
 }
@@ -10356,20 +10356,20 @@ end
 Redis:del(TheBeKoS.."BeKoS:Name:Bot") 
 return LuaTele.sendText(msg_chat_id,msg_id,"▢ ︙تم حذف اسم البوت ","md",true)   
 end
-if text == (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بلاك بينك") then
-local NamesBot = (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بلاك بينك")
+if text == (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بيكوس") then
+local NamesBot = (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بيكوس")
 local NameBots = {
 "ها "..NamesBot.. " شتريد؟",
 "أჂ̤ أჂ̤ هياتني اني",
 "موجود بس لتصيح",
-"لتــلح دا احجي ويه بنات بلاك بينك بعدين اجاوبك",
+"لتــلح دا احجي ويه بنات بيكوس بعدين اجاوبك",
 "راح نموت بكورونا ونته بعدك تصيح "..NamesBot,
 'يمعود والله نعسان'
 }
 return LuaTele.sendText(msg_chat_id,msg_id, NameBots[math.random(#NameBots)],"md",true)  
 end
 if text == "بوت" then
-local NamesBot = (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بلاك بينك")
+local NamesBot = (Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بيكوس")
 local BotName = {
 "باوع لك خليني احبك وصيحلي باسمي "..NamesBot,
 "لتخليني ارجع لحركاتي لقديمه وردا ترا اسمي "..NamesBot.. "",
@@ -11311,7 +11311,7 @@ if text == '/start' then
 Redis:sadd(TheBeKoS..'BeKoS:Num:User:Pv',msg.sender.user_id)  
 if not msg.ControllerBot then
 if not Redis:get(TheBeKoS.."BeKoS:Start:Bot") then
-local CmdStart = '*\n▢ ︙أهلآ بك في بوت '..(Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بلاك بينك")..
+local CmdStart = '*\n▢ ︙أهلآ بك في بوت '..(Redis:get(TheBeKoS.."BeKoS:Name:Bot") or "بيكوس")..
 '\n▢ ︙اختصاص البوت حماية المجموعات'..
 '\n▢ ︙لتفعيل البوت عليك اتباع مايلي ...'..
 '\n▢ ︙اضف البوت الى مجموعتك'..
