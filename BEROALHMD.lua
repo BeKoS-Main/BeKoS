@@ -11416,7 +11416,7 @@ local teex = "اشعار ايداع "..neews.."\nالمبلغ : "..F.." بتكو
 LuaTele.sendText(msg.chat_id,msg.id,teex,"md",true)
 Redis:setex(BEROALHMD.."innoo" .. msg.sender.user_id,600, true)
 elseif sender == 25 then
-   K = 'مساعد بيرو' 𖡹 
+   K = 'مساعد بيرو' 
    F = '6200'
 Redis:incrby(BEROALHMD.."nool:flotysb"..msg.sender.user_id , F)
 local ballancee = Redis:get(BEROALHMD.."nool:flotysb"..msg.sender.user_id) or 0
